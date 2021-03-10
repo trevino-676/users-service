@@ -41,3 +41,10 @@ class User(db.Model):
             "last_name": self.last_name,
             "email": self.email,
         }
+
+    def save(self):
+        try:
+            db.session.add(self)
+            db.session.commit()
+        except Exception as e:
+            print(e)

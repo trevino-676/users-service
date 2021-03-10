@@ -29,3 +29,10 @@ class Company(db.Model):
             "name": self.name,
             "description": self.description,
         }
+
+    def save(self):
+        try:
+            db.session.add(self)
+            db.session.commit()
+        except Exception as e:
+            print(e)

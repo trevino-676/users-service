@@ -1,5 +1,3 @@
-from alembic import op
-
 from app.models.users import User
 from app.models.company import Company
 
