@@ -10,7 +10,6 @@ class LoginTest(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         db.create_all()
-        insert_data()
     
     def test_successful_signup(self):
         payload = json.dumps({
