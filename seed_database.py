@@ -12,7 +12,7 @@ def insert_data():
 
     company = Company(company_data["name"], company_data["description"])
     company.save()
-    id = Company.query(id).filter(name=company_data["name"]).first()
+    id = Company.query(Company.id).filter(name=company_data["name"]).first()
 
     user_data = {
         "username": "admin",
